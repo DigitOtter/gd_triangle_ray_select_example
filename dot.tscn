@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://csml8o21j80tq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6kfm"]
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 2
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_82q4g"]
+material = SubResource("StandardMaterial3D_r6kfm")
+radius = 0.005
+height = 0.01
+
+[node name="Dot" type="MeshInstance3D"]
+mesh = SubResource("SphereMesh_82q4g")
