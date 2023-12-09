@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddj07sx3kfepb"]
+[gd_scene load_steps=5 format=3 uid="uid://ddj07sx3kfepb"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_jbqrh"]
 [ext_resource type="PackedScene" uid="uid://b25futx3622cv" path="res://chibi_cat.glb" id="2_xa7o0"]
+[ext_resource type="Script" path="res://animation_player.gd" id="3_55oty"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_r5ppu"]
 size = Vector3(0.2, 0.2, 0.2)
@@ -20,36 +21,65 @@ mesh = SubResource("BoxMesh_r5ppu")
 transform = Transform3D(0.406258, 0, 0.913758, 0, 1, 0, -0.913758, 0, 0.406258, -0.2, -0.09, 0)
 
 [node name="Skeleton3D" parent="chibi_cat/Chibi Cat" index="0"]
-bones/4/rotation = Quaternion(-0.0675967, 0.886569, -0.435237, -0.141406)
-bones/5/rotation = Quaternion(0.680348, 0.0556946, 0.133855, 0.718406)
-bones/7/rotation = Quaternion(0.392393, -0.0515544, -0.0489231, 0.917048)
-bones/8/rotation = Quaternion(0.0675974, 0.886568, -0.435237, 0.141407)
-bones/9/rotation = Quaternion(0.680348, -0.0556946, -0.133855, 0.718406)
-bones/10/rotation = Quaternion(-0.0422417, 0.793583, -0.604438, -0.0556449)
-bones/11/rotation = Quaternion(0.392393, 0.0515545, 0.048923, 0.917048)
-bones/12/rotation = Quaternion(-1.17843e-06, -0.054299, 0.998525, -1.70423e-08)
-bones/14/rotation = Quaternion(0.0133702, -1.4948e-11, 1.97227e-13, 0.999911)
-bones/18/rotation = Quaternion(-5.1927e-07, 0.674471, 0.738302, 5.3334e-07)
-bones/20/rotation = Quaternion(4.21844e-06, 0.697263, 0.716815, -4.04241e-06)
-bones/22/rotation = Quaternion(4.71277e-06, 0.712803, 0.701364, -4.89726e-06)
-bones/24/rotation = Quaternion(-0.0423881, 0.822314, -0.558882, -0.098255)
-bones/27/rotation = Quaternion(0.364215, -0.0198452, -0.0713265, 0.928367)
-bones/28/rotation = Quaternion(0.0423895, 0.822313, -0.558882, 0.0982574)
-bones/29/rotation = Quaternion(0.559615, -0.0411613, -0.0846483, 0.823391)
-bones/30/rotation = Quaternion(-0.0353122, 0.900452, -0.427449, -0.0723026)
-bones/31/rotation = Quaternion(0.364215, 0.0198448, 0.0713265, 0.928367)
+bones/2/position = Vector3(-1.00933e-17, -0.1055, 0.0254243)
+bones/2/rotation = Quaternion(3.63387e-08, 0.226815, 0.973938, 1.44979e-08)
+bones/4/rotation = Quaternion(-0.0454973, 0.904555, -0.422348, -0.0364967)
+bones/5/rotation = Quaternion(0.96545, 0.0135982, 0.146974, 0.214756)
+bones/6/rotation = Quaternion(0.0585959, 0.325548, -0.943573, 0.0159811)
+bones/7/rotation = Quaternion(0.130582, 0.0978613, 0.0415942, 0.985719)
+bones/8/rotation = Quaternion(0.0454979, 0.904555, -0.422348, 0.0364978)
+bones/9/rotation = Quaternion(0.96545, -0.0135982, -0.146974, 0.214756)
+bones/10/rotation = Quaternion(-0.058596, 0.325548, -0.943573, -0.0159812)
+bones/11/rotation = Quaternion(0.130581, -0.0978614, -0.0415942, 0.985719)
+bones/12/rotation = Quaternion(-0.410568, -0.0541605, 0.861078, 0.295034)
+bones/13/rotation = Quaternion(0.097858, -0.631756, -0.241318, 0.730119)
+bones/14/rotation = Quaternion(-0.0288017, 0.52283, -0.303466, 0.796071)
+bones/15/rotation = Quaternion(-0.127932, 0.374797, -0.36474, 0.842689)
+bones/16/rotation = Quaternion(0.00219497, -0.111651, -0.429285, 0.896239)
+bones/17/rotation = Quaternion(0.00505776, 0.359038, -0.0292427, 0.932851)
+bones/18/rotation = Quaternion(-5.47846e-07, 0.668577, 0.743643, 4.9857e-07)
+bones/20/rotation = Quaternion(3.6167e-06, 0.798635, 0.601816, -4.60184e-06)
+bones/22/rotation = Quaternion(3.76044e-06, 0.832904, 0.553418, -5.65952e-06)
+bones/24/rotation = Quaternion(-0.0463369, 0.697915, -0.714616, -0.00955234)
+bones/25/rotation = Quaternion(0.688948, 0.0397148, 0.104377, 0.716155)
+bones/26/rotation = Quaternion(0.0489032, 0.766848, -0.637166, 0.0597607)
+bones/27/rotation = Quaternion(0.269072, 0.0714217, -0.0224833, 0.960205)
+bones/28/rotation = Quaternion(0.0463391, 0.697916, -0.714615, 0.00955468)
+bones/29/rotation = Quaternion(0.688947, -0.0397147, -0.104377, 0.716156)
+bones/30/rotation = Quaternion(-0.0489031, 0.76685, -0.637165, -0.0597608)
+bones/31/rotation = Quaternion(0.269074, -0.0714214, 0.0224828, 0.960204)
+bones/32/rotation = Quaternion(-7.94759e-07, 0.880014, 0.474948, 1.38163e-06)
 bones/33/rotation = Quaternion(7.27958e-09, 0.791913, 0.610634, -5.97878e-08)
-bones/34/rotation = Quaternion(-7.23348e-08, 0.791913, 0.610634, -4.34616e-08)
+bones/34/rotation = Quaternion(-1.39754e-08, 0.843561, 0.537034, 7.8872e-08)
 bones/38/rotation = Quaternion(-9.24584e-08, 0.823362, -0.567517, -2.58467e-07)
-bones/41/rotation = Quaternion(0, 1, 0, 0)
-bones/42/rotation = Quaternion(0, 1, 0, 0)
-bones/43/rotation = Quaternion(0, 1, 0, -7.54979e-08)
+bones/41/rotation = Quaternion(8.88178e-16, 0.981844, -0.18969, 0)
+bones/42/rotation = Quaternion(4.44089e-16, 0.998317, -0.0579952, 7.10543e-15)
+bones/43/rotation = Quaternion(-2.79038e-09, 0.999317, 0.0369597, -7.54463e-08)
+bones/44/position = Vector3(-0.0117154, -0.0250082, 0.000212387)
+bones/45/position = Vector3(0, 0.0012698, 0.0115551)
 bones/45/rotation = Quaternion(0, 0, 1, 0)
+bones/48/position = Vector3(0.0117154, -0.0250082, 0.000212387)
+bones/49/position = Vector3(0, 0.0012698, 0.0115551)
 bones/49/rotation = Quaternion(0, 0, 1, 0)
+bones/52/position = Vector3(-0.0289989, -0.0586337, 0.00214067)
+bones/52/rotation = Quaternion(0.255107, 0.0644618, -0.236352, 0.935362)
+bones/53/position = Vector3(0.0119285, 0.000671957, 0.0104968)
 bones/53/rotation = Quaternion(0, 0, 1, 0)
-bones/57/rotation = Quaternion(0, 0, 1, 0)
+bones/54/position = Vector3(-0.0294008, 0.0446198, 0.00869179)
+bones/54/rotation = Quaternion(0.255107, 0.0644617, 0.236352, 0.935362)
+bones/56/position = Vector3(0.0289989, -0.0586337, 0.00214067)
+bones/56/rotation = Quaternion(0.255107, -0.0644617, 0.236352, 0.935362)
+bones/57/position = Vector3(-0.0119285, 0.000671957, 0.0104968)
+bones/57/rotation = Quaternion(-7.31806e-10, -1.616e-09, 1, -1.86265e-09)
+bones/58/position = Vector3(0.0294008, 0.0446198, 0.00869178)
+bones/58/rotation = Quaternion(0.255107, -0.0644617, -0.236352, 0.935362)
+
+[node name="AnimationPlayer" parent="chibi_cat" index="2"]
+script = ExtResource("3_55oty")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.821149, 0.382622, -0.423456, 0, 0.741976, 0.670427, 0.570714, -0.55052, 0.609273, -0.453453, 0.557633, 0.745978)
+
+[connection signal="animation_finished" from="chibi_cat/AnimationPlayer" to="chibi_cat/AnimationPlayer" method="_on_animation_finished"]
 
 [editable path="chibi_cat"]

@@ -47,7 +47,7 @@ func _input(event):
 func _process(delta):
 	# Every second, print the position of last point_on_triangle
 	self.time += delta
-	self._move_cat_root_skeleton(self.time)
+	#self._move_cat_root_skeleton(self.time)
 	
 	self.print_time += delta
 	if self.mesh_triangle_point and self.mesh_triangle_point.mesh_instance:
@@ -63,8 +63,11 @@ func _process(delta):
 			self.mesh_triangle_point.mesh_instance.add_child(self.indicator)
 			self.indicator.owner = self.mesh_triangle_point.mesh_instance
 		
+		self.indicator.visible = true
 		self.indicator.transform = updated_point_pose
 		
 		if self.print_time >= 1.0:
 			self.print_time = 0.0
 			print("Current point position: ", updated_point_pose.origin)
+	else:
+		self.indicator.visible = false
